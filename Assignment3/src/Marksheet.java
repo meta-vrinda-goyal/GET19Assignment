@@ -30,7 +30,7 @@ public class Marksheet{
     void getGrades(){
         float grade;
         System.out.print("Enter the number of students.");
-        /* Taking input as total number of students*/
+        /* Taking input of total number of students*/
 	do{
 	    System.out.println("No of students should be positive integer");
 	    noOfStudents = in.nextLine();
@@ -39,7 +39,7 @@ public class Marksheet{
 	totalStudents=Integer.parseInt(noOfStudents); //string converted to integer
         grades = new float[totalStudents];
         
-        /*taking input as grades*/
+        /*taking input of grades*/
         int i = 0;
 	while (i < totalStudents){
 	    System.out.printf("Enter the grade for student" + (i + 1));
