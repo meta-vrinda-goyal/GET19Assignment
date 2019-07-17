@@ -12,7 +12,7 @@ public class TestFixXY {
 	@Test
 	public void testForEmptyArray(){
 		try {
-			ArrOperation.fixXY(new int[]{},0,0);
+			ArrOperation.fixXY(new int[]{},4,5);
 		} catch (AssertionError e) {
 			System.out.println("Array is empty");
 		}
