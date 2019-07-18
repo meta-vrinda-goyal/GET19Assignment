@@ -54,8 +54,8 @@ public class TestMaxMirror {
     public void testForPositiveCases() {
         assertEquals(Expected, ArrOperation.maxMirror(arrInput));
     }
-    @Test
-	public void testForEmptyArray() {
+    @AfterClass
+	public static void testForEmptyArray() {
 		try {
 			ArrOperation.maxMirror(new int[]{});
 		} catch (AssertionError e) {
