@@ -112,7 +112,7 @@ public class ArrOperation{
 	    else if (!flag){
 	        throw new AssertionError("Array has two adjacent x");
 	    }
-	    else if (xList.contains(arr.length-1)) {
+	    else if (xList.contains(arr.length-1)){
 	    	throw new AssertionError("array has last element as X");
 	    }
 	    else{
