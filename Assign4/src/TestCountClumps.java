@@ -3,14 +3,14 @@ import org.junit.jupiter.api.Test;
 
 public class TestCountClumps {
 	@Test
-	void testForPositiveCases() {
+	public void testForPositiveCases() {
 		assertEquals(1,ArrOperation.countClumps(new int[]{1, 2, 2, 3, 4}));
 		assertEquals(2,ArrOperation.countClumps(new int[]{1, 1, 2, 1, 1}));
 		assertEquals(1,ArrOperation.countClumps(new int[]{1, 1, 1, 1, 1}));
 		
 	}
 	@Test
-	void testForEmptyArray() {
+	public void testForEmptyArray() {
 		try {
 			ArrOperation.countClumps(new int[]{});
 		}
