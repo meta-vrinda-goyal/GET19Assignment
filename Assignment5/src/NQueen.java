@@ -1,6 +1,5 @@
 
 public class NQueen {
-	int[][] board;   // board matrix of type 2Darray
 	/**
 	 * @param board : 2d matrix
 	 * @param dimensionOfMatrix
@@ -23,7 +22,7 @@ public class NQueen {
 	 */
 	boolean  isValidToPlaceQueen(int board[][], int row, int col,int dimensionOfMatrix){ 
 	     int i, j; 
-	     for (i = 0; i < row; i++){ 
+	     for (i = row-1; i >= row; i--){ 
 	         if (board[i][col] == 1){ 
 	             return false;   // If queen exist in upper row 
 	         }
