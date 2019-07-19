@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Shape{
+public class Shape{
     /** calculates area of rectangle
      * @param width : width of rectangle
      * @param height : height of rectangle
@@ -12,9 +12,8 @@ class Shape{
 	catch (ArithmeticException e){
 	    System.out.println("Exception occured");
 	} 
-	finally{
-	    return width * height;
-	}
+	return width * height;
+	
     }
     /** calculates area of triangle
      * @param base : base of triangle
@@ -29,9 +28,8 @@ class Shape{
 	catch (ArithmeticException e){
 	    System.out.println("Exception occured");
 	} 
-	finally{
-	    return halfConstant * base * height;
-	}
+	return halfConstant * base * height;
+	
     }
 
     /**
@@ -46,9 +44,9 @@ class Shape{
          catch (ArithmeticException e){
 	     System.out.println("Exception occured");
 	 } 
-	 finally{
-	     return width * width;
-	 }
+	 
+	 return width * width;
+	 
      }
      /**
       * calculates area of circle
@@ -63,9 +61,8 @@ class Shape{
 	 catch (ArithmeticException e){
 	     System.out.println("Exception occured");
 	 } 
-	 finally{
-	     return pi * radius * radius;
-	 }
+	 return pi * radius * radius;
+	 
       }
 }
 
@@ -76,7 +73,7 @@ public class Area {
      System.out.println("Chose the shape whose area you want to calculate");
      System.out.println("1.)Rectangle\t2.)Triangle\t3.)Square\t4.)Circle");
      int shape = sc.nextInt();
-     try{
+    
          switch (shape){
 	 case 1 :
 	 	System.out.println("Enter the width and height");
@@ -103,9 +100,7 @@ public class Area {
 	 default:
 		System.out.println("You did not enter number mentioned above");
 	 }
-     }
-     catch (Exception e){
-	 System.out.println("Please enter valid number");
-     }
+     
+     
    }
 }
