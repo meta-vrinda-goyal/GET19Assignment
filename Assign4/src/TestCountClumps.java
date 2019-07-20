@@ -9,13 +9,8 @@ public class TestCountClumps {
 		assertEquals(1,ArrOperation.countClumps(new int[]{1, 1, 1, 1, 1}));
 		
 	}
-	@Test
+	@Test(expected AssertionError.class)
 	public void testForEmptyArray() {
-		try {
-			ArrOperation.countClumps(new int[]{});
-		}
-		catch (AssertionError e) {
-			System.out.println("Array is empty");
-		}
+		ArrOperation.countClumps(new int[]{});
 	}
 }
