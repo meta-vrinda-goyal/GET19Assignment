@@ -1,5 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+
+import org.junit.Ignore;
+import org.junit.Test;
 
 public class TestCountClumps {
 	@Test
@@ -9,7 +11,7 @@ public class TestCountClumps {
 		assertEquals(1,ArrOperation.countClumps(new int[]{1, 1, 1, 1, 1}));
 		
 	}
-	@Test(expected AssertionError.class)
+	@Test(expected = AssertionError.class)
 	public void testForEmptyArray() {
 		ArrOperation.countClumps(new int[]{});
 	}
