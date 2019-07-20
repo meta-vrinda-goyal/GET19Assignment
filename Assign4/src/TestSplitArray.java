@@ -1,6 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Ignore;
+import org.junit.Test;
 
 public class TestSplitArray {
 	@Test
@@ -10,13 +11,8 @@ public class TestSplitArray {
 		assertEquals( 1,ArrOperation.splitArray(new int[]{10,10}));
 		
 	}
-	@Test 
+	@Test(expected = AssertionError.class) 
 	public void testForEmptyArray() {
-		try {
-			ArrOperation.splitArray(new int[]{});
-		}
-		catch (AssertionError e) {
-			System.out.println("Array is empty");
-		}
+		ArrOperation.splitArray(new int[]{});
 	}
 }
