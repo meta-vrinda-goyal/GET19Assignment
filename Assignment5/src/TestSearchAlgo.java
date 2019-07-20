@@ -10,14 +10,9 @@ public class TestSearchAlgo {
 		assertEquals(4, Search.doLinearSearch(new int[] {1,2,5,6,4,7},4));
 		assertEquals(2, Search.doLinearSearch(new int[] {0,6,5,8,23,4},5));
 	}
-	@Test
+	@Test(expected = AssertionError.class) 
 	public void TestLinearIfElementNotExist() {
-		try {
-			Search.doLinearSearch(new int[]{1,2,3,4,5},6);
-		}
-		catch (AssertionError e) {
-			System.out.println("Element does not exist");
-		}
+		Search.doLinearSearch(new int[]{1,2,3,4,5},6);
 	}
 	@Test
 	public void testBinarySearch() {
@@ -26,14 +21,10 @@ public class TestSearchAlgo {
 		assertEquals(8, Search.doBinarySearch(new int[] {1,2,3,4,5,5,9,62,89},89));
 	}
 	
-	@Test
+	@Test(expected = AssertionError.class) 
 	public void TestBinaryIfElementNotExist() {
-		try {
-			Search.doBinarySearch(new int[]{1,2,3,4,5},66);
-		}
-		catch (AssertionError e) {
-			System.out.println("Element does not exist");
-		}
+		Search.doBinarySearch(new int[]{1,2,3,4,5},66);
+		
 	}
 
 }
