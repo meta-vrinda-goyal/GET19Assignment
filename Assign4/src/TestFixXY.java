@@ -1,6 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Ignore;
+import org.junit.Test;
 public class TestFixXY {
 	@Test
 	public void testPositiveCases() {
@@ -9,37 +10,21 @@ public class TestFixXY {
 		assertArrayEquals( new int[]{1, 4, 5, 1, 1, 4, 5},ArrOperation.fixXY(new int[]{1, 4, 1, 5, 5, 4, 1},4,5));
 	}
 
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testForEmptyArray(){
-		try {
-			ArrOperation.fixXY(new int[]{},4,5);
-		} catch (AssertionError e) {
-			System.out.println("Array is empty");
-		}
+		ArrOperation.fixXY(new int[]{},4,5);
 	}
-	@Test
+	@Test(expected = AssertionError.class)
 	public void TestForUnequalXY(){
-		try {
-			ArrOperation.fixXY(new int[]{5, 4, 9,4, 9},4,5);
-		} catch (AssertionError e) {
-			System.out.println("unequal numbers of X and Y in input array");
-		}
+		ArrOperation.fixXY(new int[]{5, 4, 9,4, 9},4,5);
 	}
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testForAdjacentX(){
-		try {
-			ArrOperation.fixXY(new int[]{5, 4, 4, 9, 5},4,5);
-		} catch (AssertionError e) {
-			System.out.println("two adjacent X values in array");
-		}
+		ArrOperation.fixXY(new int[]{5, 4, 4, 9, 5},4,5);
 	}
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testForXAtLastIndex(){
-		try {
-			ArrOperation.fixXY(new int[]{5, 4, 5, 9, 4},4,5);
-		} catch (AssertionError e) {
-			System.out.println("X occurs at the last index in array");
-		}
+		ArrOperation.fixXY(new int[]{5, 4, 5, 9, 4},4,5);
 	}
 
 }
