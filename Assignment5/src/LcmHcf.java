@@ -21,32 +21,20 @@ public class LcmHcf{
 	        return bigNum;
 	    }
 	    int fact; //store the factors
+	    boolean flag = false;
 	    for ( fact = 2; fact <= bigNum; fact++) {
-	        if (smallNum%fact != 0 && bigNum%fact !=0 ) { // if both the numbers are not divisible check next factor
-		    continue;
-		}
-		if (smallNum%fact == 0) {
+	        if (smallNum%fact == 0) {
 		    smallNum /= fact;
-			if (bigNum%fact ==0) {
-			    bigNum /= fact;
-		  	        break;	
-			    }
-			else {
-			    break;
-			}
+		    flag = true;
 		}
-			
-		if (bigNum%fact == 0) {
+		if(bigNum%fact == 0){
 		    bigNum /= fact;
-		    if (smallNum%fact ==0) {
-		        smallNum /= fact;
-		        break;	
-		    }
-	            else {
-		        break;	
-		    }
+		    flag = true;
 		}
-	    }
+		if(flag){
+		    break;
+		}
+	     }
 		// recursion call 
 		return fact*getLcm(smallNum,bigNum);
         }
