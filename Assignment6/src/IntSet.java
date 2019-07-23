@@ -37,14 +37,7 @@ public final class IntSet {
 	    if (s.size() <= array.length) {
 		int i, j;
 		for (i = 0; i < s.size(); i++) {
-		    for (j = 0; j < array.length; j++) {
-			// check whether member of set s exist in array or not
-			if (s.getArray()[i] == array[j]) {
-			    break;
-			}
-		    }
-		    // not found in array
-		    if (j >= array.length){
+		    if(!isMember(s.getArray()[i])) {
 			return false;
 		    }
 		}
@@ -60,18 +53,9 @@ public final class IntSet {
 	public IntSet getCompliment() {
 	    // set size of compliment array
 	    int[] complimentArray = new int[1000 - array.length];
-	    boolean isExist;
 	    for (int i = 1, index = 0; i <= 1000; i++) {
-		isExist = false;
-		for (int j = 0; j < array.length; j++) {
-		    // avoid member which exist in array
-		    if (array[j] == i) {
-			isExist = true;
-		    }
-		}
-		if (!isExist) {
-		    // check size of compliment array
-		    if (index < complimentArray.length){
+		if(!isMember(i)){   // avoid member which exist in array
+		     if (index < complimentArray.length){
 			complimentArray[index++] = i;
 		    }
 		    else{
@@ -98,10 +82,8 @@ public final class IntSet {
 	    int count = 0;
 	    // count the common member in s1 and s2
 	    for (int i = 0; i < length1; i++) {
-	        for (int j = 0; j < length2; j++){
-		    if (array1[i] == array2[j]){
-			count++;
-		    }
+	        if(s2.isMember(array1[i])) {
+		    count++;
 		}
 	    }
 	    // union array for s1 and s2
