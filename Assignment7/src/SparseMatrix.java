@@ -6,8 +6,8 @@ public final class SparseMatrix {
 
 	public SparseMatrix(int[][] array) {
 	    //store dimension of array
-	    rowSize = array.length;
-	    colSize = array[0].length;
+	    this.rowSize = array.length;
+	    this.colSize = array[0].length;
 	    //count non-zero element in array
 	    int size = countNonZero(array);
 	    this.matrix = new int[size][3];  //column length is fixed
