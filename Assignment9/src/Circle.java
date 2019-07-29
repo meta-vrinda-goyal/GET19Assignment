@@ -4,11 +4,12 @@ import java.util.List;
 
 public class Circle implements Shape {
 	
-	Point originPoint;
+	Point originPoint; // origin point of type Point
 	int radius;
-	final double pi=3.14;
+	final double pi = 3.14;
 	Timestamp timestamp;
 	
+	//constructor 
 	public Circle(Point originPoint, List<Integer> parameters, Timestamp timestamp) {
 		this.originPoint = originPoint;
 		this.radius = parameters.get(0);
@@ -55,9 +56,11 @@ public class Circle implements Shape {
 		double factor = distance + radius;
 		double xCenter = (factor * originPoint.getXCoordinate())/distance;
 		double yCenter = (factor * originPoint.getYCoordinate())/distance;
-		if(xPoint >= (xCenter - radius) && xPoint <= (xCenter + radius))
-			if(yPoint >= (yCenter - radius) && yPoint <= (yCenter + radius))
+		if(xPoint >= (xCenter - radius) && xPoint <= (xCenter + radius)){
+			if(yPoint >= (yCenter - radius) && yPoint <= (yCenter + radius)){
 				return true;
+			}
+		}
 		return false;
 		
 	}
