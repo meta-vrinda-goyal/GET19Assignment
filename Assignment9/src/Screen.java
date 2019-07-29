@@ -53,9 +53,10 @@ public class Screen {
 		//traverse through list
 		for(int i = 0; i < shapeList.size(); i++){
 			//check if point is enclosed
-			if(shapeList.get(i).isPointEnclosed(point))
+			if(shapeList.get(i).isPointEnclosed(point)){
 				//add that shape to new list
 				shapeListEnclosingPoint.add(shapeList.get(i));
+			}
 		}
 		//return new list
 		return shapeListEnclosingPoint;
