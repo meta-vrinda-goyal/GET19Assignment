@@ -30,7 +30,7 @@ public class Zoo {
 	
 	/**
 	 * @param category: type of category 
-	 * @return number of zones allocated to specific category
+	 * @return number of cages allocated to specific category
 	 */
 	public int getCapacityOfZone(String category) {
 		Map<String, Integer> capacity = new HashMap<String, Integer>();
