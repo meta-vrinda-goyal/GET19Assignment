@@ -55,8 +55,9 @@ public class Rectangle implements Shape {
 		double yPodouble=point.getYCoordinate();
 		double xOrigin = originPoint.getXCoordinate();
 		double yOrigin = originPoint.getYCoordinate();
-		if(xPodouble >= xOrigin && xPodouble <= (xOrigin + breadth) && yPodouble >= yOrigin && yPodouble <= (yOrigin + length))
+		if(xPodouble >= xOrigin && xPodouble <= (xOrigin + breadth) && yPodouble >= yOrigin && yPodouble <= (yOrigin + length)){
 			return true;
+		}
 		return false;
 	}
 }
