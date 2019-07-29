@@ -86,25 +86,25 @@ public class Zoo {
 	 * @param typeOfAnimal
 	 * @return function add cages to the cage list and returns true if cage is added else throws assertion error
 	 */
-	public boolean addCage(String typeOfAnimal) {
-		//check in zone list
-		for (int i = 0; i < zone.size(); i++) {
-			//check if zone exist for the particular type of animal
-			if (getCategory(typeOfAnimal).equals(zone.get(i).getCategory())) {
-				//if number of cages in that zone is less than limit of cages in that zone
-				if (zone.get(i).cageList.size() < zone.get(i).getLimitOfCages()){
-					//add cage
-					zone.get(i).cageList.add(new Cage(typeOfAnimal, getCapacityOfCage(typeOfAnimal)));
-					return true;
-				}
-				// zone has cages equal to it's limit so throw assertion error
-				else
-					throw new AssertionError("Zone is full");
-			}
-		}
-		//zone does not exist for that animal category
-		return false;
-	}
+// 	public boolean addCage(String typeOfAnimal) {
+// 		//check in zone list
+// 		for (int i = 0; i < zone.size(); i++) {
+// 			//check if zone exist for the particular type of animal
+// 			if (getCategory(typeOfAnimal).equals(zone.get(i).getCategory())) {
+// 				//if number of cages in that zone is less than limit of cages in that zone
+// 				if (zone.get(i).cageList.size() < zone.get(i).getLimitOfCages()){
+// 					//add cage
+// 					zone.get(i).cageList.add(new Cage(typeOfAnimal, getCapacityOfCage(typeOfAnimal)));
+// 					return true;
+// 				}
+// 				// zone has cages equal to it's limit so throw assertion error
+// 				else
+// 					throw new AssertionError("Zone is full");
+// 			}
+// 		}
+// 		//zone does not exist for that animal category
+// 		return false;
+// 	}
 
 	/**
 	 * @param name : name of animal
@@ -159,9 +159,10 @@ public class Zoo {
 					//get index of that cage
 					int cageIndex = zone.get(i).cageList.indexOf(type);
 					//if number of animals in that cage are less than the limit
-					if (zone.get(i).cageList.get(cageIndex).animal.size() < zone.get(i).cageList.get(cageIndex).getCapacity())
+					if (zone.get(i).cageList.get(cageIndex).animal.size() < zone.get(i).cageList.get(cageIndex).getCapacity()){
 						//return index of zone
 						return i;
+					}
 					
 				}
 				// zone has cages less than limit of cages in that zone
@@ -174,7 +175,7 @@ public class Zoo {
 			return addZone(category);
 		//zone cant be added
 		else
-			throw new AssertionError("Zone is full");
+			throw new AssertionError("Zoo is full");
 	}
 	
 	/**
