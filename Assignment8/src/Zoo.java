@@ -116,26 +116,25 @@ public class Zoo {
 	public boolean addAnimal( String name, String type, double weight, int age) {
 		//get indexes of the zone and cage available
 		int[] indexes = indexForAnimal(type);
-		List<Animal> animal = zone.get(indexes[0]).cageList.get(indexes[1]).animal;
 		//add animal on the basis of it's type
 		switch (type) {
 			case "Lion" :
-				animal.add(new Lion(name, type, weight, age, ++id));
+				zone.get(indexes[0]).cageList.get(indexes[1]).animal.add(new Lion(name, type, weight, age, ++id));
 				break;
 			case "Deer" :
-				animal.add(new Deer(name, type, weight, age, ++id));
+				zone.get(indexes[0]).cageList.get(indexes[1]).animal.add(new Deer(name, type, weight, age, ++id));
 				break;
 			case "Snake" :
-				animal.add(new Snake(name, type, weight, age, ++id));
+				zone.get(indexes[0]).cageList.get(indexes[1]).animal.add(new Snake(name, type, weight, age, ++id));
 				break;
 			case "Turtle" :
-				animal.add(new Turtle(name, type, weight, age, ++id));
+				zone.get(indexes[0]).cageList.get(indexes[1]).animal.add(new Turtle(name, type, weight, age, ++id));
 				break;
 			case "Eagle" :
-				animal.add(new Eagle(name, type, weight, age, ++id));
+				zone.get(indexes[0]).cageList.get(indexes[1]).animal.add(new Eagle(name, type, weight, age, ++id));
 				break;
 			case "Parrot" :
-				animal.add(new Parrot(name, type, weight, age, ++id));
+				zone.get(indexes[0]).cageList.get(indexes[1]).animal.add(new Parrot(name, type, weight, age, ++id));
 				break;
 			default :
 				break;
