@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Zoo {
 	
-	// number of zones in zoo = 10;
+	// number of zones in zoo = 3;
 	private final int zooCapacity = 3;
 	// list of zones in zoo
 	private List<Zone> zone = new ArrayList<Zone>();
