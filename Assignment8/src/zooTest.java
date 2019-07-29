@@ -11,8 +11,8 @@ public class zooTest {
 		assertTrue(zoo.addAnimal("SherKhan", "Lion", 120, 10));
 		assertTrue(zoo.addAnimal("mithu", "Parrot", 0.250, 10));
 		assertTrue(zoo.addAnimal("Sheru", "Lion", 120, 10));
-//		Animal animal=(Lion)zoo.zone.get(1).cageList.get(0).animal.get(0);
-//		System.out.println(animal.getSound());
+		Animal animal=(Lion)zoo.zone.get(1).cageList.get(0).animal.get(0);
+		System.out.println(animal.getSound());
 	}
 	
 	@Test(expected = AssertionError.class)
