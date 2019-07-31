@@ -13,7 +13,6 @@ public class MultivariatePolynomial {
 		//list for terms of polynomial
 		List<String> terms = new ArrayList<String>();
 		String termOfpoly = "";
-		int indexCount = 0;
 		char ch;
 		for (int i = 0; i < poly.length(); i++) {
 			//split in terms
@@ -27,7 +26,6 @@ public class MultivariatePolynomial {
 		for (int i = 0; i < terms.size(); i++) {
 			//get each term
 			termOfpoly = terms.get(i);
-			indexCount = 0;
 			//add a new list in nested list
 			nestedList.add(new ArrayList<Integer>());
 			for (int j = 0; j < termOfpoly.length(); j++) {
@@ -37,9 +35,8 @@ public class MultivariatePolynomial {
 				if (j == 0 && ch >= 'a' && ch <= 'z') {
 					//coefficient of term is 1
 					nestedList.get(i).add(1);
-					indexCount++;
 				} else if (ch >= '1' && ch <= '9') {
-					if(indexCount != 0 && (termOfpoly.charAt(j - 1) >= '1' && termOfpoly.charAt(j - 1) <= '9')){
+					if(nestedList.get(i).size() >= 1 && (termOfpoly.charAt(j - 1) >= '1' && termOfpoly.charAt(j - 1) <= '9')){
 						//get last value
 						int previousValue = nestedList.get(i).get(nestedList.get(i).size()-1);
 						previousValue = (previousValue * 10) + Character.getNumericValue(ch);
@@ -48,11 +45,10 @@ public class MultivariatePolynomial {
 						nestedList.get(i).add(previousValue);
 					}else{
 						nestedList.get(i).add(Character.getNumericValue(ch));
-						indexCount++;
+	
 					}
 					//when character is variable
 				} else if (ch >= 'a' && ch <= 'z') {
-					indexCount++;
 					if ((j + 1) == termOfpoly.length() || (termOfpoly.charAt(j + 1) >= 'a' && termOfpoly.charAt(j + 1) <= 'z')) {
 						nestedList.get(i).add(1);
 					}
