@@ -23,7 +23,7 @@ public class EmployeeCollectionTest {
 		//making a list
 		List<Employee> peopleList = new ArrayList<Employee>();
 		//adding employee from set to list
-		peopleList.addAll(EmployeeCollection.set);
+		peopleList.addAll(collection.set);
 		//sorting list 
 		Collections.sort(peopleList,new  SortByName());
 		for (Employee emp : peopleList) {
@@ -42,7 +42,7 @@ public class EmployeeCollectionTest {
 		collection.addEmployee(2,"mini", "qwe");
 		
 		List<Employee> peopleList = new LinkedList<Employee>();
-		peopleList.addAll(EmployeeCollection.set);
+		peopleList.addAll(collection.set);
 		Collections.sort(peopleList,new  SortById());
 		for (Employee emp : peopleList) {
             System.out.println(emp);
