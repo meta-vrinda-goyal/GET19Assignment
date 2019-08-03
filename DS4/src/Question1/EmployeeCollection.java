@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class EmployeeCollection {
 	
 	//collection of employee made using a set
-	static HashSet<Employee> set=new HashSet<Employee>();
+         HashSet<Employee> set=new HashSet<Employee>();
 	/**
 	 * method adds employee to set
 	 * @param empId of employee
