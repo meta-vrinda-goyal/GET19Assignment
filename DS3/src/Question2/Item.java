@@ -4,7 +4,6 @@ public class Item {
 	int item;
 	int priority;
 	public Item(int item, int priority) {
-		super();
 		this.item = item;
 		this.priority = priority;
 	}
