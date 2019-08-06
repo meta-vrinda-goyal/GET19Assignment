@@ -130,7 +130,8 @@ public class BinaryTree {
                 return root.getlChild(); 
             }
             // node with two children: Get the inorder successor (smallest  in the right subtree) 
-            root.getEntry().setKey(minValue(root.getrChild())); 
+            root.getEntry().setKey(minKey(root.getrChild())); 
+	    root.getEntry().setValue(minValue(root.getrChild())); 
   
             // Delete the inorder successor 
             root.setrChild(deleteRec(root.getrChild(), root.getEntry().getKey()));
@@ -141,10 +142,18 @@ public class BinaryTree {
      * @param root
      * @return minimum value in tree
      */
-    public int minValue(Node root) { 
-        int minv = root.getEntry().getKey(); 
+    public int minKey(Node root) { 
+        int minKey = root.getEntry().getKey(); 
         while (root.getlChild() != null) { 
-            minv = root.getlChild().getEntry().getKey(); 
+            minKey = root.getlChild().getEntry().getKey(); 
+            root = root.getlChild(); 
+        } 
+        return minKey; 
+    } 
+    public String minValue(Node root) { 
+        String minv = root.getEntry().getValue(); 
+        while (root.getlChild() != null) { 
+            minv = root.getlChild().getEntry().getValue();
             root = root.getlChild(); 
         } 
         return minv; 
