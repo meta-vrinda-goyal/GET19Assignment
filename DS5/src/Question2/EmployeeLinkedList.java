@@ -29,12 +29,17 @@ public class EmployeeLinkedList {
 	/**
 	 * method to print list
 	 */
-	public void print() {
+	public String[] print() {
+		String[] arr = new String[size];
 		Node curr = head.next;
+		int i =0;
 		while (curr != null) {
 			System.out.println(curr.employee.getName());
+			arr[i] = curr.employee.getName();
 			curr = curr.next;
+			i++;
 		}
+		return arr;
 	}
 	
 	
