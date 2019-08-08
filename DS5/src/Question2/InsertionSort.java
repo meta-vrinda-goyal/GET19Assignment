@@ -27,7 +27,10 @@ public class InsertionSort {
 		        //if salary is less no need to insert that element in sorted list
 				if(compare.employee.getSalary() < current.employee.getSalary()) {
 					//shift compare and previous
-					caseOfNotInserting();
+					caseOfNotInserting(list);
+					if(j == i-1)
+				    end = end.next;
+
 				}
 				//else put element in sorted list
 				else if(compare.employee.getSalary() > current.employee.getSalary()) {
@@ -37,7 +40,10 @@ public class InsertionSort {
 				//if salary of both are equal
 				else {
 					if(compare.employee.getAge() > current.employee.getAge()) {
-						caseOfNotInserting();
+						caseOfNotInserting(list);
+						if(j == i-1)
+						end = end.next;
+
 					}
 					else{
 						caseOfInserting(list);
@@ -46,7 +52,6 @@ public class InsertionSort {
 				}
 			}
 			list.last = end;
-			end = end.next;
 		}
 		return list;
 		
@@ -54,7 +59,7 @@ public class InsertionSort {
 	/**
 	 * when element does not need to be inserted
 	 */
-	private void caseOfNotInserting(){
+	private void caseOfNotInserting(EmployeeLinkedList list){
 		current = current.next;
 		prev = prev.next;
 	}
