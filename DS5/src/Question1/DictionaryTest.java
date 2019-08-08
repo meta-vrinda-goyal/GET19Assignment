@@ -8,55 +8,38 @@ import org.junit.Test;
 
 import Question1.DataEntry;
 import Question1.Dictionary;
-
+//test class to test operations on dictionary
 public class DictionaryTest {
 
+	//test case the list is sorted on the basis of key
 	@Test
-	public void sortingFullDictionaryTest() {
+	public void sortingTest() {
 		Dictionary d = new Dictionary("file.json");
 		List<DataEntry> list = new ArrayList<DataEntry>();
-		d.addData(33, "hu");
-		d.addData(33, "hu");
-		
+		d.addData(33, "huma");
+		d.addData(33, "huma");
 		list = d.getSortedList();
-		for(int i = 0; i<list.size();i++) {
-			System.out.println(list.get(i).getKey() + " " + list.get(i).getValue());
-		}
-		System.out.println();
+		assertEquals("alia",d.getValue(1));
 	}
-	@Test
-	public void sortingDictionaryInRangeTest() {
-		Dictionary d = new Dictionary("file.json");
-		List<DataEntry> list = new ArrayList<DataEntry>();
-		d.addData(33, "hu");
-		d.addData(33, "hu");
-		
-		list = d.getSubSortedList(2,6);
-		for(int i = 0; i<list.size();i++) {
-			System.out.println(list.get(i).getKey() + " " + list.get(i).getValue());
-		}
-		System.out.println();
-	}
-	
+	//test case to check value at a given key
 	@Test
 	public void getValueTest() {
 		Dictionary d = new Dictionary("file.json");
 		assertEquals("vrinda",d.getValue(6));
 	}
+	//test case when key not found
 	@Test
 	public void keyNotFoundTest() {
 		Dictionary d = new Dictionary("file.json");
 		assertEquals("key not found",d.getValue(277));
 	}
+	//test case to remove data from dictionary
 	@Test
 	public void removeDataTest() {
 		Dictionary d = new Dictionary("file.json");
 		List<DataEntry> list = new ArrayList<DataEntry>();
 		d.removeData(4);
 		list = d.getSortedList();
-		for(int i = 0; i<list.size();i++) {
-			System.out.println(list.get(i).getKey() + " " + list.get(i).getValue());
-		}
-		System.out.println();
+		assertEquals(4, list.size());
 	}
 }
