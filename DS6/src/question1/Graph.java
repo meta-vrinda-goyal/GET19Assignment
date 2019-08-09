@@ -45,15 +45,17 @@ public class Graph implements UndirectedWeightedGraph {
 			//if all adjacent vertices of i visited
 			if (j >= vertices.length) {
 				stack.pop();
-				if (!stack.empty())
+				if (!stack.empty()){
 					i = stack.peek();
+				}
 			}
 		}
 		//if any vertex is not connected 
 		for (int k = 0; k < vertices.length; k++) {
-			if (!vertices[k])
+			if (!vertices[k]){
 				//graph is not connected
 				return false;
+			}
 		}
 		return true;
 	}
@@ -80,8 +82,9 @@ public class Graph implements UndirectedWeightedGraph {
 		}
 		reachableNodes = new int[nodes.size()];
 		int i = 0;
-		for (int connectedNode : nodes)
+		for (int connectedNode : nodes){
 			reachableNodes[i++] = connectedNode;
+		}
 		return reachableNodes;
 	}
 
@@ -94,9 +97,10 @@ public class Graph implements UndirectedWeightedGraph {
 		for (int j = 0; j < graph.length; j++) {
 			//if node is unique and adjacent
 			if (graph[node][j] > 0) {
-				if (nodes.add(j))
+				if (nodes.add(j)){
 					//recursive call
 					findConnections(j, nodes);
+				}
 			}
 		}
 		return;
