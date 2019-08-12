@@ -12,7 +12,7 @@ public class MaxHeap {
 	 * @return position of parent
 	 */
 	private int parent(int pos) { 
-		return pos+1 / 2; 
+		return (pos-1) / 2; 
 	} 
     /**
 	 * @param pos
