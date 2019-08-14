@@ -1,0 +1,22 @@
+Fashion,\N,4
+Men Fashion,1,4
+Women Fashion,1,10
+Personal Care,\N
+Body Wash,4
+Laptop,20,1
+Jeans,2,6
+Jeans,3,7
+Plazo,3,19
+Top Wear,3,19
+Tunic,3,19
+Washing machine,20,27
+Footwear,3,4
+Footwear,2,4
+Sneakers,13,4
+Slippers,13,5
+Shirt,3,20
+Saree,3,12
+Kurti,3,15
+Jacket,2,18
+Dress,3,19
+electronics,20,26
