@@ -7,24 +7,27 @@
 5,DellLaptop,I7 processor- Graphic card,70000,20,img7
 6,SamsungLaptop,Red color-8GB RAM,50000,40,img8
 7,lenovo lithium ion,\N,999,20,img9
-4,SneakersShoes,Flat Sole- Shimmering,2000,500,image
-5,FlatsSlippers,1 year warranty- Daily wear,50,10,1
-6,LevisJeans,Blue Color- Denim,2000,30,0
-7,WoodlandJeans,Black color- Ankle,4000,200,1
-8,AdidasShirt,White color- Round neck,100,5000,1
-9,ReebokShirt,Black color- Party wear,1500,20,1
-10,SilkSaree,Beautiful- Red color- Limited stock,5000,150,0
-11,CheffonSaree,Green color-Party wear- Light weight,7000,40,0
-12,CottonSaree,Free length-Blue color,200,10,0
-13,PeopleTop,Purple color-Off shoulder,2500,30,1
-14,MaxTop,Black color-Striped, 1500,120,1
-15,AnarkaliKurti,Floor length, 2000,600,0
-16,ShortKurtis,Parrot green color,130,10,1
-17,LittleJackets,Woolen- Red black color,500,1100,1
-18,JiniJackets,Half sleeves-comfortable-woolen,3000,70,0     
-19,GirlsDress,Beautiful-Dress-pink color,2000,200,1
-20,BoysDress,Smart shirt and pant pair-Tie,150,10,1
+8,mi 20000mah,\N,1500,25,img10
+9,apple ipad,32 gb space grey,26000,5,img11
+10,sony bravia,\N,25000,10,img12
+11,prestige mixer grinder,\N,2800,12,img13
+12,philipsinduction cooktop,\N,2400,15,img14
+13,SneakersShoes,Flat Sole- Shimmering,2000,500,img15
+14,FlatsSlippers,1 year warranty- Daily wear,500,10,\N
+15,LevisJeans,Blue Color- Denim,2000,30,img23
+16,WoodlandJeans,Black color- Ankle,4000,200,img67
+17,AdidasShirt,White color- Round neck,100,5000,img28
+18,ReebokShirt,Black color- Party wear,1500,20,img25
+19,SilkSaree,Beautiful- Red color- Limited stock,5000,150,img26
+20,CheffonSaree,Green color-Party wear- Light weight,7000,40,\N
+21,CottonSaree,Free length-Blue color,200,10,\N
+22,PeopleTop,Purple color-Off shoulder,2500,30,img78
+23,MaxTop,Black color-Striped, 1500,120,img69
+24,AnarkaliKurti,Floor length, 2000,600,img45
+25,ShortKurtis,Parrot green color,130,10,img88
+26,LittleJackets,Woolen- Red black color,500,1100,\N
+27,JiniJackets,Half sleeves-comfortable-woolen,3000,70,img59    
+27,JiniJackets,Half sleeves-comfortable-woolen,3000,70,img60
+28,GirlsDress,Beautiful-Dress-pink color,2000,200,img61
 
-24,SkirtDress,Small skirt for kids-top,650,70,1
-25,LenovoMobile,Slim-Light weight-Rose gold color,1700,220,1
-26,MIMobile,40 MP front camera-4GB RAM,25000,410,0
+
