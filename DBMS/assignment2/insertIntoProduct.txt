@@ -1,6 +1,12 @@
-1,HP i5 Laptop,Intel i5 powered laptop that can take on anything,42999,9,image7
-2,HP i3 Laptop,Intel i3 powered laptop that can take on anything,42999,9,image1
-3,HP i3 Laptop,Intel i3 powered laptop that can take on anything,42999,9,image2
+1,LenovoMobile,Slim-Light weight-Rose gold color,1700,220,img1
+2,MIMobile,40 MP front camera-4GB RAM,25000,410,img2
+3,HP i5 Laptop,Intel i5 powered laptop that can take on anything,42999,9,img3
+3,HP i3 Laptop,Intel i3 powered laptop that can take on anything,42999,9,img4
+3,HP i3 Laptop,Intel i3 powered laptop that can take on anything,42999,9,img5
+4,LenovoLaptop,15Inch display-Black,47000,1700,img6
+5,DellLaptop,I7 processor- Graphic card,70000,20,img7
+6,SamsungLaptop,Red color-8GB RAM,50000,40,img8
+7,lenovo lithium ion,\N,999,20,img9
 4,SneakersShoes,Flat Sole- Shimmering,2000,500,image
 5,FlatsSlippers,1 year warranty- Daily wear,50,10,1
 6,LevisJeans,Blue Color- Denim,2000,30,0
@@ -18,9 +24,7 @@
 18,JiniJackets,Half sleeves-comfortable-woolen,3000,70,0     
 19,GirlsDress,Beautiful-Dress-pink color,2000,200,1
 20,BoysDress,Smart shirt and pant pair-Tie,150,10,1
-21,LenovoLaptop,15Inch display-Black,47000,1700,0
-22,DellLaptop,I7 processor- Graphic card,70000,20,0
-23,SamsungLaptop,Red color-8GB RAM,50000,40,1
+
 24,SkirtDress,Small skirt for kids-top,650,70,1
 25,LenovoMobile,Slim-Light weight-Rose gold color,1700,220,1
 26,MIMobile,40 MP front camera-4GB RAM,25000,410,0
