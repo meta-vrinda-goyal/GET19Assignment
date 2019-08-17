@@ -1,47 +1,47 @@
-Mobile and Computer,\N,1
-Electronics,\N,10
-Women Fashion,\N,22
-Men Fashion,\N,17
-Grocery and household,\N,\N
-Personal care and health,\N,\N
-Mobiles,1,1
-Mobiles,1,2
-Laptops,1,3
-Laptops,1,4
-Laptops,1,5
-Laptops,1,6
-power banks,1,7
-power banks,1,8
-tablets,1,9
-television,2,10
-air conditioner,2,\N
-washing machine,2,\N
-kitchen appliances,2,12
-clothing,3,16
-clothing,4,17
-shoes,3,13
-shoes,4,13
-handbags,3,\N
-cooking essential,5,\N
-snacks and beverages,5,\N
-beauty and grooming,6,\N
-mixer grinder,19,11
-induction cooktop,19,12
-tops and shirts,20,17
-tops and shirts,21,18
-dresses,20,28
-jeans,20,16
-skirts,20,28
-kurti,20,24
-sandals,22,14
-sneakers,22,14
-casual shirts,21,13
-jeans,21,15
-sports shoes,23,\N
-casual shoes,23,\N
-oil and ghee,20,\N
-sugar,20,\N
-biscuits,21,\N
-namkeen,21,\N
-eye makeup,22,\N
-lipsticks,22,\N
+Mobile and Computer,\N
+Electronics,\N
+Women Fashion,\N
+Men Fashion,\N
+Grocery and household,\N
+Personal care and health,\N
+Mobiles,1
+Mobiles,1
+Laptops,1
+Laptops,1
+Laptops,1
+Laptops,1
+power banks,1
+power banks,1
+tablets,1
+television,2
+air conditioner,2
+washing machine,2
+kitchen appliances,2
+clothing,3
+clothing,4
+shoes,3
+shoes,4
+handbags,3
+cooking essential,5
+snacks and beverages,5
+beauty and grooming,6
+mixer grinder,19
+induction cooktop,19
+tops and shirts,20
+tops and shirts,21
+dresses,20
+jeans,20
+skirts,20
+kurti,20
+sandals,22
+sneakers,22
+casual shirts,21
+jeans,21
+sports shoes,23
+casual shoes,23
+oil and ghee,20
+sugar,20
+biscuits,21
+namkeen,21
+eye makeup,22
+lipsticks,22
