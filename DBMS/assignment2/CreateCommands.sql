@@ -49,8 +49,8 @@
         product_Id INT,
         quantity INT NOT NULL,
         price FLOAT,
-        image VARCHAR(10),
-        PRIMARY KEY (product_Id,image)
+        image VARCHAR(10)
+        #PRIMARY KEY (product_Id,image)
     );
     describe product;
     CREATE TABLE Stock(
@@ -62,7 +62,7 @@
         category_Id INT AUTO_INCREMENT,
         name VARCHAR(20),
         parent_category INT,
-        PRIMARY KEY (category_Id,product_Id)
+        PRIMARY KEY (category_Id)
     );
         
     CREATE TABLE categorylink(
