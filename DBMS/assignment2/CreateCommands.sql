@@ -62,10 +62,16 @@
         category_Id INT AUTO_INCREMENT,
         name VARCHAR(20),
         parent_category INT,
-        product_Id INT,
         PRIMARY KEY (category_Id,product_Id)
     );
-    
+        
+    CREATE TABLE categorylink(
+        product_id INT, 
+        category_id INT, 
+        PRIMARY KEY(product_id, category_id),
+        FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE ON UPDATE CASCADE, 
+        FOREIGN KEY (category_id) REFERENCES categories(category_id) ON DELETE CASCADE ON UPDATE CASCADE
+    );
     
     CREATE TABLE Orders(
         order_id INT PRIMARY KEY AUTO_INCREMENT,
