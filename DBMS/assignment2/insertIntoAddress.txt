@@ -1,0 +1,4 @@
+1,12-a,nehru apartments,jaipur,rajasthan,,home,332201
+2,b-4,shastri nagar,bikaner,rajasthan,india,home,334001
+3,32-c,metacube,jaipur,rajasthan,india,office,332201
+4,b-2,pratap nagar,jaipur,rajasthan,india,home,332201
