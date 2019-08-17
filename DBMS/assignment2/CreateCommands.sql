@@ -29,11 +29,11 @@
     
     CREATE TABLE Address(
         address_Id INT NOT NULL AUTO_INCREMENT,
-        shopper_Id INT,
-        house_no VARCHAR(10),
-        street VARCHAR(30),
-        city VARCHAR(15),
-        state VARCHAR(20),
+        shopper_Id INT NOT NULL,
+        house_no VARCHAR(10) NOT NULL,
+        street VARCHAR(30) NOT NULL,
+        city VARCHAR(15) NOT NULL,
+        state VARCHAR(20) NOT NULL,
         country VARCHAR(30) DEFAULT 'India',
         type VARCHAR(10),
         zipcode INT(6) ZEROFILL NOT NULL,
@@ -44,7 +44,7 @@
     );
                          
     CREATE TABLE Product(
-        name VARCHAR(20),
+        name VARCHAR(30),
         description VARCHAR(100),
         product_Id INT,
         quantity INT NOT NULL,
