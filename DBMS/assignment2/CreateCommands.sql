@@ -1,7 +1,6 @@
-    DROP DATABASE StoreFront;
+DROP DATABASE StoreFront;
     CREATE DATABASE StoreFront;
     USE Storefront;
-    
 CREATE TABLE User (
     email VARCHAR(30) PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
@@ -44,26 +43,28 @@ CREATE TABLE Address (
 );
                          
 CREATE TABLE Product (
+    product_Id INT,
     name VARCHAR(30),
     description VARCHAR(100),
-    product_Id INT,
-    quantity INT NOT NULL,
     price FLOAT,
+    quantity INT NOT NULL,
     image VARCHAR(10),
     PRIMARY KEY (product_Id , image)
 );
 
 CREATE TABLE Stock (
-    product_Id INT PRIMARY KEY,
+    product_Id INT,
+    image VARCHAR(10),
     is_in_stock BOOLEAN NOT NULL DEFAULT FALSE,
+    PRIMARY KEY (product_id , image),
     CONSTRAINT Product_Id3 FOREIGN KEY (product_id)
         REFERENCES Product (product_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
-    
+
 CREATE TABLE Category (
     category_Id INT AUTO_INCREMENT,
-    name VARCHAR(20),
+    name VARCHAR(30),
     parent_category INT,
     PRIMARY KEY (category_Id)
 );
@@ -79,29 +80,16 @@ CREATE TABLE categorylink (
         REFERENCES category (category_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
-    
-CREATE TABLE Orders (
-    order_id INT PRIMARY KEY AUTO_INCREMENT,
-    shopper_id INT,
-    amount FLOAT NOT NULL,
-    date DATE NOT NULL,
-    CONSTRAINT shopper_id2 FOREIGN KEY (shopper_id)
-        REFERENCES Shopper (shopper_Id)
-        ON DELETE CASCADE ON UPDATE CASCADE
-);
 
-CREATE TABLE amount (
-    shopper_id INT,
-    amount FLOAT
-);
-    
 CREATE TABLE cart (
+    cart_id INT,
     shopper_id INT,
     product_id INT,
     quantity DOUBLE NOT NULL,
     sum DOUBLE,
     order_status VARCHAR(20) CHECK (order_status IN ('Shipped' , 'Cancelled', 'Returned', 'Not Shipped')),
-    PRIMARY KEY (shopper_id , product_id),
+    cartUpdateDate DATE,
+    PRIMARY KEY (cart_id , shopper_id , product_id),
     CONSTRAINT shopper_id FOREIGN KEY (shopper_id)
         REFERENCES Shopper (shopper_Id)
         ON DELETE CASCADE ON UPDATE CASCADE,
@@ -109,13 +97,25 @@ CREATE TABLE cart (
         REFERENCES Product (product_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE amount (
+    cart_id INT,
+    shopper_id INT,
+    amount FLOAT
+);
+
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    cart_id INT,
+    shopper_id INT,
+    amount FLOAT,
+    date DATE NOT NULL,
+    CONSTRAINT cart_id FOREIGN KEY (cart_id)
+        REFERENCES cart (cart_id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT shopper_id2 FOREIGN KEY (shopper_id)
+        REFERENCES Shopper (shopper_Id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
     
-    
-                               
-                               
-                               
-                       
-        
-                          
-                          
-                          
