@@ -72,6 +72,8 @@ SET
     cart.sum = Product.price * cart.quantity
 WHERE
     cart.quantity > 0;
+#delete those products which are not in stock
+DELETE from cart where cart.product_id in (select product_id from stock where is_in_stock is false);
 SELECT * FROM cart;
     
 INSERT INTO amount (cart_id,shopper_id,amount)  
