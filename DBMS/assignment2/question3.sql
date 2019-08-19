@@ -29,14 +29,18 @@ WHERE
     
 #Display list of shoppers which haven't ordered anything since last month.
 SELECT 
-    s.shopper_id, s.email
+    shopper_id, email
 FROM
-    shopper s
-        LEFT JOIN
-    orders o ON s.shopper_id = o.shopper_id
+    shopper
 WHERE
-    o.date < CURRENT_DATE - 30;
-
+    shopper_id NOT IN (SELECT DISTINCT
+        s.shopper_id
+    FROM
+        shopper s
+            LEFT JOIN
+        orders o ON s.shopper_id = o.shopper_id
+    WHERE
+        o.date > CURRENT_DATE-30);
 #Display list of shopper along with orders placed by them in last 15 days. 
 SELECT 
     s.shopper_id, s.email, o.order_id, o.amount, o.date
