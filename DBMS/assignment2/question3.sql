@@ -3,7 +3,7 @@ SELECT
     order_id, date, amount AS order_total
 FROM
     orders
-ORDER BY date
+ORDER BY date desc
 LIMIT 50;
     
 #Display 10 most expensive Orders.
