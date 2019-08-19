@@ -26,7 +26,7 @@ CREATE OR REPLACE VIEW order_information AS
     ORDER BY o.date DESC;
 #Use the above view to display the Products(Items) which are in ‘shipped’ state.
 SELECT 
-    product_id
+    product_id,order_id
 FROM
     order_information
 WHERE
