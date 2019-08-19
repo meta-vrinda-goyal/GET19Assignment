@@ -53,7 +53,7 @@ WHERE
 	
 #Display Product Title, Price & Description which falls into particular category Title (i.e. “Mobile”)
 SELECT 
-    p.name, p.price, p.description
+    distinct p.name, p.price, p.description
 FROM
     product p,
     category c,
@@ -66,7 +66,7 @@ WHERE
     
 #Display the list of Products whose Quantity on hand (Inventory) is under 50.
 SELECT 
-    product_id, name, description,quantity
+   distinct product_id, name, description,quantity
 FROM
     product
 WHERE
