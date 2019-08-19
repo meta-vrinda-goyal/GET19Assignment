@@ -5,8 +5,9 @@ FROM
     shopper s
         LEFT JOIN
     orders o ON s.shopper_id = o.shopper_id
-GROUP BY o.shopper_id
-HAVING o.date > CURRENT_DATE - 30;
+WHERE
+    o.date > CURRENT_DATE-30
+GROUP BY o.shopper_id;
 
 #Display the top 10 Shoppers who generated maximum number of revenue in last 30 days.
 SELECT 
