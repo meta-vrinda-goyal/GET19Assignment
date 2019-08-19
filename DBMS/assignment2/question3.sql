@@ -55,6 +55,6 @@ FROM
         LEFT JOIN
     orders o ON c.shopper_id = o.shopper_id
 WHERE
-    o.order_id = 1;
+    o.order_id = 1  and c.order_status = 'shipped';
     
 #Display list of order items along with order placed date which fall between Rs 20 to Rs 50 price.
