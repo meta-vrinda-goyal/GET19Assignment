@@ -27,9 +27,11 @@ SELECT
 FROM
     product p,
     cart c
+    where c.product_id = p.product_id
 GROUP BY c.product_id
 ORDER BY SUM(c.quantity) DESC
 LIMIT 20;
+
 
 #Display Monthly sales revenue of the StoreFront for last 6 months. It should display each month’s sale.
 SELECT 
