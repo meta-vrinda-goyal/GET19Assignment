@@ -63,8 +63,8 @@ LOAD DATA LOCAL INFILE 'C:/Users/Vrinda/insertIntoCart.txt'
     FIELDS TERMINATED BY ',' 
     ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n'
-    (cart_id,shopper_id,product_id,quantity,order_status,@cartUpdateDate)
-    SET cartUpdateDate = STR_TO_DATE(@cartUpdateDate, '%d-%m-%Y');
+    (cart_id,shopper_id,product_id,quantity,order_status);
+    
 UPDATE cart
         INNER JOIN
     Product ON cart.product_id = Product.product_id 
