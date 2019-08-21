@@ -9,6 +9,7 @@ WHERE
     o.date > CURRENT_DATE-30
 GROUP BY o.shopper_id;
 
+
 #Display the top 10 Shoppers who generated maximum number of revenue in last 30 days.
 SELECT 
     o.shopper_id, s.email
@@ -32,14 +33,13 @@ GROUP BY c.product_id
 ORDER BY SUM(c.quantity) DESC
 LIMIT 20;
 
-
 #Display Monthly sales revenue of the StoreFront for last 6 months. It should display each month’s sale.
 SELECT 
     MONTH(o.date), SUM(o.amount) AS revenue
 FROM
     orders o
 WHERE
-    o.date > CURRENT_DATE - 360
+    o.date < CURRENT_DATE - 30
 GROUP BY MONTH(o.date); 
 
 #Mark the products as Inactive which are not ordered in last 90 days.
