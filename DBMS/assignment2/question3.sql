@@ -41,6 +41,9 @@ WHERE
         orders o ON s.shopper_id = o.shopper_id
     WHERE
         o.date > CURRENT_DATE-30);
+    
+    
+
 #Display list of shopper along with orders placed by them in last 15 days. 
 SELECT 
     s.shopper_id, s.email, o.order_id, o.amount, o.date
@@ -49,7 +52,8 @@ FROM
         LEFT JOIN
     orders o ON s.shopper_id = o.shopper_id
 WHERE
-    o.date > CURRENT_DATE - 15;
+ 
+    o.date > CURRENT_DATE - 365;
     
 #Display list of order items which are in “shipped” state for particular Order Id (i.e.: 1020))
 SELECT 
@@ -57,8 +61,8 @@ SELECT
 FROM
     cart c
         LEFT JOIN
-    orders o ON c.shopper_id = o.shopper_id
+    orders o ON c.cart_id = o.cart_id
 WHERE
-    o.order_id = 1  and c.order_status = 'shipped';
+    o.order_id = 2 and c.order_status = 'shipped';
     
 #Display list of order items along with order placed date which fall between Rs 20 to Rs 50 price.
