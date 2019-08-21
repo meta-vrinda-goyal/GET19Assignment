@@ -88,7 +88,6 @@ CREATE TABLE cart (
     quantity DOUBLE NOT NULL,
     sum DOUBLE,
     order_status VARCHAR(20) CHECK (order_status IN ('Shipped' , 'Cancelled', 'Returned', 'Not Shipped')),
-    cartUpdateDate DATE,
     PRIMARY KEY (cart_id , shopper_id , product_id),
     CONSTRAINT shopper_id FOREIGN KEY (shopper_id)
         REFERENCES Shopper (shopper_Id)
