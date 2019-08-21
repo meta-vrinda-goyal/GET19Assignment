@@ -32,5 +32,3 @@ FROM
         LEFT JOIN
     categoryLink cl ON cl.category_id = c.category_id
 GROUP BY cl.category_Id;
- 
-
