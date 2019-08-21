@@ -1,0 +1,24 @@
+LenovoMobile,Slim-Light weight-Rose gold color,1700,220
+MIMobile,40 MP front camera-4GB RAM,25000,410
+HP i3 Laptop,Intel i3 powered laptop that can take on anything,42999,9
+LenovoLaptop,15Inch display-Black,47000,1700
+DellLaptop,I7 processor- Graphic card,70000,20
+SamsungLaptop,Red color-8GB RAM,50000,0
+lenovo lithium ion,\N,999,0
+mi 20000mah,\N,1500,25
+apple ipad,32 gb space grey,26000,5
+sony bravia,\N,25000,10
+prestige mixer grinder,\N,2800,12
+philipsinduction cooktop,\N,2400,15
+SneakersShoes,Flat Sole- Shimmering,2000,500
+LevisJeans,Blue Color- Denim,2000,30
+WoodlandJeans,Black color- Ankle,4000,200
+AdidasShirt,White color- Round neck,100,5000
+ReebokShirt,Black color- Party wear,1500,20
+SilkSaree,Beautiful- Red color- Limited stock,5000,150
+CottonSaree,Free length-Blue color,200,10
+PeopleTop,Purple color-Off shoulder,2500,30
+AnarkaliKurti,Floor length,2000,600
+ShortKurtis,Parrot green color,130,10
+LittleJackets,Woolen- Red black color,500,11
+JiniJackets,Half sleeves-comfortable-woolen,3000,70   
