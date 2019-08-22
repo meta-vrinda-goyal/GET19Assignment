@@ -10,8 +10,8 @@ public class QueryStatement {
 	 *         chronological order.
 	 */
 	public static String getShippedOrders(){
-		return "SELECT " + 
-			    "o.order_id, o.date, c.sum " +
+		return "SELECT distinct " + 
+			    "o.order_id, o.date, o.orderBill " +
 			    "FROM " +
 			        "items_ordered i, " +
 			        "orders o " +
