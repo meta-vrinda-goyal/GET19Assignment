@@ -31,11 +31,9 @@ FROM
     shopper
 WHERE
     shopper_id NOT IN (SELECT DISTINCT
-        s.shopper_id
+        shopper_id
     FROM
-        shopper s
-            LEFT JOIN
-        orders o ON s.shopper_id = o.shopper_id
+        orders o 
     WHERE
         o.date > CURRENT_DATE-30);
     
