@@ -4,7 +4,6 @@
 3,image4,url4
 4,image5,url5
 5,image6,url6
-6,\N,\N
 7,image7,url7
 7,image8,url8
 8,image9,url9
