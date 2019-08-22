@@ -49,8 +49,14 @@ CREATE TABLE Product(
     description VARCHAR(100),
     price FLOAT,
     quantity INT,
-    PRIMARY KEY (product_Id)
+    stock_id INT,
+    PRIMARY KEY (product_Id),
+    CONSTRAINT Stock_id1 FOREIGN KEY (stock_id)
+        REFERENCES Stock (stock_id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+   
 );
+
 CREATE TABLE image(
     product_id INT,
     imageName VARCHAR(20),
