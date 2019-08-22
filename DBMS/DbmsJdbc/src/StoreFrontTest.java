@@ -16,9 +16,8 @@ public class StoreFrontTest {
 		QueryExecution execution = new QueryExecution(con);
 		List<Order> resultList = new ArrayList<Order>();
 		resultList.add(new Order(4, java.sql.Date.valueOf("2019-03-12"), 1700));
-		resultList.add(new Order(3, java.sql.Date.valueOf("2019-07-12"), 1700));
-		resultList.add(new Order(2, java.sql.Date.valueOf("2019-08-04"), 25000));
-		resultList.add(new Order(2, java.sql.Date.valueOf("2019-08-04"), 70000));
+		resultList.add(new Order(3, java.sql.Date.valueOf("2019-07-12"), 185699));
+		resultList.add(new Order(2, java.sql.Date.valueOf("2019-08-04"), 166700));
 		List<Order> orderList = execution.getShippedOrdersDetails(2);
 		for (int i = 0; i < resultList.size(); i++) {
 			assertEquals(resultList.get(i).getOrderID(), orderList.get(i).getOrderID());
