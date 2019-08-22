@@ -42,7 +42,12 @@ CREATE TABLE Address(
         REFERENCES Shopper (shopper_Id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
-                         
+
+CREATE TABLE Stock(
+    stockName VARCHAR(20),
+    stockId INT
+);
+                        
 CREATE TABLE Product(
     product_Id INT AUTO_INCREMENT,
     name VARCHAR(30),
@@ -52,7 +57,7 @@ CREATE TABLE Product(
     stock_id INT,
     PRIMARY KEY (product_Id),
     CONSTRAINT Stock_id1 FOREIGN KEY (stock_id)
-        REFERENCES Stock (stock_id)
+        REFERENCES Stock (stockId)
         ON DELETE CASCADE ON UPDATE CASCADE
    
 );
@@ -65,13 +70,6 @@ CREATE TABLE image(
         REFERENCES product (product_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
-CREATE TABLE Stock(
-    stockName VARCHAR(20),
-    stockId INT
-);
-
 
 CREATE TABLE Category(
     category_Id INT AUTO_INCREMENT,
