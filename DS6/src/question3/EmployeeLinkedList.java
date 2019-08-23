@@ -87,7 +87,7 @@ public class EmployeeLinkedList {
 				get(j).setData(name, age, salary);
 			}
 		}
-		// set pivot employee on his correct position
+		// set pivot employee on its correct position
 		String name = get(i + 1).getName();
 		int age = get(i + 1).getAge();
 		int salary = get(i + 1).getSalary();
