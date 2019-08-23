@@ -1,0 +1,13 @@
+1,1,1,Shipped
+2,2,1,shipped
+2,5,2,shipped
+2,1,1,cancelled
+3,4,3,not shipped
+3,1,1,shipped
+3,3,1,cancelled
+4,1,1,shipped
+5,4,2,returned
+6,6,1,shipped
+6,7,1,shipped
+6,1,1,cancelled
+6,1,1,cancelled
