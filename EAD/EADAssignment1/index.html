@@ -62,14 +62,6 @@
                 <td id="YearlyPrice"></td>
             </tr>
         </table><br>
-        <label><input type="radio" id="pricePlan" name="pricePlan" value="Daily"
-                onchange="getPriceFunction(this.value)">Daily</label>
-        <label><input type="radio" id="pricePlan" name="pricePlan" value="Monthly"
-                onchange="getPriceFunction(this.value)">Monthly</label>
-        <label><input type="radio" id="pricePlan" name="pricePlan" value="Yearly"
-                onchange="getPriceFunction(this.value)">Yearly</label>
-        <br>
-        <br>
         <select id="priceType" onchange="changeCurrency(priceType.value)">
             <option disabled selected>--Select Price Type--</option>
             <option>INR</option>
@@ -79,6 +71,15 @@
         </select>
         <br>
         <br>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="Daily"
+                onchange="getPriceFunction(this.value)">Daily</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="Monthly"
+                onchange="getPriceFunction(this.value)">Monthly</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="Yearly"
+                onchange="getPriceFunction(this.value)">Yearly</label>
+        <br>
+        <br>
+        
 
         <input type="button" value="getPass" id="getPass" onclick="getPassFunction()" />
 
