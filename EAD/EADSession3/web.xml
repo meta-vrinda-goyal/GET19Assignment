@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>EADSession3</display-name>
+  <servlet>
+    <display-name>AddStudent</display-name>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <servlet-class>com.servlets.AddStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <url-pattern>/AddStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>ShowStudent</display-name>
+    <servlet-name>ShowStudentsServlet</servlet-name>
+    <servlet-class>com.servlets.ShowStudentsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowStudentsServlet</servlet-name>
+    <url-pattern>/ShowStudentsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>UpdateStudent</display-name>
+    <servlet-name>UpdateStudentDetailsServlet</servlet-name>
+    <servlet-class>com.servlets.UpdateStudentDetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStudentDetailsServlet</servlet-name>
+    <url-pattern>/UpdateStudentDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
