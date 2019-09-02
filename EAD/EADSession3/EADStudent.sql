@@ -7,9 +7,11 @@ CREATE TABLE STUDENT_DETAIL(
    first_name VARCHAR(30),
    last_name VARCHAR(30),
    father_name VARCHAR(30),
-   class INT,
-   age INT
+   class INT check (class BETWEEN 1 and 12),
+   age INT check (Age BETWEEN 5 and 20)
 );
+
+
 
 
 UPDATE STUDENT_DETAIL SET  age = 19 where email  = "sachin@metcube.com";
