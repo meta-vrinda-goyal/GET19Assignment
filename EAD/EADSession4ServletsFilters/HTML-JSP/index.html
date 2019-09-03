@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Employee Page</title>
+<style>
+#add_vehicle {
+	visibility: hidden;
+}
+</style>
+<script src="javascript.js">
+	
+</script>
+</head>
+<body align="center">
+	<h1>Welcome to Metacube Parking System</h1>
+
+	<div id="employee_registration">
+		<form name="registerForm" action="RegisterServlet" method="POST">
+			<h2>Register here</h2>
+			<table align="center" style="text-align: left" cellpadding="10">
+				<tr>
+					<td><label>FIRST NAME</label></td>
+					<td><input name="first_name" type="text"
+						placeholder="First Name" size="60%" pattern="[A-Z a-z]*" required></td>
+				</tr>
+				<tr>
+					<td><label>LAST NAME</label></td>
+					<td><input name="last_name" type="text"
+						placeholder="Last Name" size="60%" pattern="[A-Z a-z]*" required></td>
+				</tr>
+				<tr>
+					<td><label>GENDER</label></td>
+					<td><label> <input type="radio" name="gender"
+							value="Male" required>Male
+					</label> <label> <input type="radio" name="gender" value="Female">Female
+					</label></td>
+					<td>
+				</tr>
+				<tr>
+					<td><label>EMAIL</label></td>
+					<td><input name="email" type="email" placeholder="Email"
+						size="60%" required></td>
+				</tr>
+				<tr>
+					<td><label>PASSWORD</label></td>
+					<td><input name="password" type="password"
+						placeholder="Password" size="60%"
+						pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}" required></td>
+				</tr>
+				<tr>
+					<td><label>CONFIRM PASSWORD</label></td>
+					<td><input name="confirm_password" type="password"
+						placeholder="Confirm Password" size="60%" required></td>
+				</tr>
+				<tr>
+					<td><label>CONTACT</label></td>
+					<td><input name="contact" type="text" placeholder="Contact"
+						size="60%" pattern="([0-9]){10}" required></td>
+				</tr>
+				<tr>
+					<td><label>ORGANIZATION</label></td>
+                    <td><select name="organization" id="organization" required>
+                        <option disabled selected value="">Select Organization</option>
+                        <option value="Metacube">Metacube</option>
+                        <option value="organization2">organization2</option>
+                        <option value="organization3">organization3</option>
+                        <option value="organization4">organization4</option>
+                        </select></td>
+				</tr>
+
+			</table>
+			<br> <br> <input id="register_employee" type="submit"
+				value="Register" style="width: 100px; height: 30px">
+
+
+		</form>
+		<h3>
+			Already Registered ? <a href="login.html"> Login here</a>
+		</h3>
+	</div>
+
+	
+</body>
+</html>
