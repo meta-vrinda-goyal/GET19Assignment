@@ -31,6 +31,7 @@ public class RegisterServlet extends HttpServlet {
 				out.print("Password does not match");
 			response.sendRedirect("index.html");
 			}
+			else{
 			PreparedStatement statement = MySQLCon.getConnection().prepareStatement(Queries.queryForAddEmployee());
 			statement.setString(1, request.getParameter("first_name"));
 			statement.setString(2, request.getParameter("last_name"));
@@ -48,6 +49,7 @@ public class RegisterServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("emp_id", result.getInt(1));
 			getServletContext().getRequestDispatcher("/vehicleReg.jsp").include(request, response);
+			}
 			//request.setAttribute("regId", result.getInt(1));
 			
 			//RequestDispatcher dispatcher = request.getRequestDispatcher("vehicleReg.jsp") ;
