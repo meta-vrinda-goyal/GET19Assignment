@@ -117,7 +117,7 @@ public class UserController {
 		}
 	}
 	@GetMapping("/addVehicle")
-	public String vehicleAdded1(@RequestParam("regId") String regId, Model model) {
+	public String addvehicle(@RequestParam("regId") String regId, Model model) {
 		model.addAttribute("regId",regId);
 		model.addAttribute("vehicle", new Vehicle());
 		return "addVehicle";
@@ -136,7 +136,7 @@ public class UserController {
 
 	}
 	@GetMapping("/getPass")
-	public String getPass1(@RequestParam("vehicleType")String vehicleType,@RequestParam("regId")String regId,Model model) {
+	public String getPass(@RequestParam("vehicleType")String vehicleType,@RequestParam("regId")String regId,Model model) {
 		model.addAttribute("vehicleType", vehicleType);
 		model.addAttribute("regId", regId);
 		model.addAttribute("pass", new Pass());
@@ -152,7 +152,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/home")
-	public String getPass(@RequestParam("regId")Integer regId, Model model) {
+	public String home(@RequestParam("regId")Integer regId, Model model) {
 		EmployeeDetails emp = userService.getEmpDetails(regId);
 		model.addAttribute("emp", emp);
 		return "home";
