@@ -41,13 +41,10 @@ public class MVCConfig implements WebMvcConfigurer{
 	
 	@Bean
 	public FilterRegistrationBean<MyFilter> validationFilter(){
-	    FilterRegistrationBean<MyFilter> registrationBean 
-	      = new FilterRegistrationBean<>();
+	    FilterRegistrationBean<MyFilter> registrationBean = new FilterRegistrationBean<>();
 	         
 	    registrationBean.setFilter(new MyFilter());
-	    registrationBean.addUrlPatterns("/home","/friend","/friendProfile","/update"
-	    		);
-	         
+	    registrationBean.addUrlPatterns("/home","/friend","/friendProfile","/update");
 	    return registrationBean;    
 	}
 	
