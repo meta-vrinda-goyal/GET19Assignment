@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parking System</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="logo">Logo</div>
+        <ul class="menu-area">
+            <li><a href="#employee_registration">Add Employee</a></li>
+            <li><a href="#vehicle_reg">Add Vehicle</a></li>
+            <li><a href="#feedback">Give feedback</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <h1 align="center" style="color: white">Welcome to Parking System</h1><br /><br />
+    <div>
+        <img src="car.jpg" alt="Parking Image" style="width:35%">
+    </div>
+
+    <div id="employee_registration" align="center">
+        <!-- employee registration form -->
+        <button class="collapsible">Employee Registration </button>
+        <div class="content">
+            <h1>Register Here</h1>
+            <form name="registerForm" method="POST">
+
+                <table style="text-align: left;" cellpadding="10" align="center">
+                    <tr>
+                        <td><label>FIRST NAME</label></td>
+                        <td><input name="first_name" type="input" placeholder="First Name" size="60%" pattern="[A-Z a-z]*" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>LAST NAME</label></td>
+                        <td><input name="last_name" type="input" placeholder="Last Name" size="60%" pattern="[A-Z a-z]*" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>GENDER</label></td>
+                        <td><label> <input type="radio" name="gender" value="Male" required>Male
+                            </label> <label> <input type="radio" name="gender" value="Female">Female
+                            </label></td>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td><label>EMAIL</label></td>
+                        <td><input name="email" type="email" placeholder="Email" size="60%" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>PASSWORD</label></td>
+                        <td><input name="password" type="password" placeholder="Password" size="60%" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>CONFIRM PASSWORD</label></td>
+                        <td><input name="confirm_password" type="password" placeholder="Confirm Password" size="60%" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>CONTACT</label></td>
+                        <td><input name="contact" type="input" placeholder="Contact" size="60%" pattern="([0-9]){10}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>ORGANIZATION</label></td>
+                        <td><select name="organization" id="organization" required>
+                                <option disabled selected value="">Select Organization</option>
+                                <option value="Metacube">Metacube</option>
+                                <option value="organization2">organization2</option>
+                                <option value="organization3">organization3</option>
+                                <option value="organization4">organization4</option>
+                            </select></td>
+                    </tr>
+
+                </table>
+                <br> <br> <input id="register_employee" type="submit" value="Register">
+            </form>
+            <br /><br />
+        </div>
+    </div>
+    <br /><br />
+    <!-- vehicle registration form -->
+    <div id="vehicle_reg" align="center">
+        <button class="collapsible">Vehicle Registration</button>
+        <div class="content">
+            <form method="GET">
+                <h1>Add Your Vehicle</h1>
+                <table style="text-align: left" cellpadding="10">
+                    <tr>
+                        <td><label>VEHICLE MAKE(COMPANY)</label></td>
+                        <td><input name="vehicle_name" type="input" placeholder="vehicle_name" size="60%" pattern="[A-Z a-z]*" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>VEHICLE TYPE</label></td>
+                        <td><select name="vehicle_type">
+                                <option disabled selected>--Select-Type--</option>
+                                <option value="Cycle">Cycle</option>
+                                <option value="MotorCycle">MotorCycle</option>
+                                <option value="Four Wheelers">Four Wheelers</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label>VEHICLE NUMBER</label></td>
+                        <td><input name="vehicle_number" type="input" placeholder="Vehicle Number" size="60%" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>EMPLOYEE ID</label></td>
+                        <td><input name="emp_Id" type="input" size="60%"></td>
+                    </tr>
+                    <tr>
+                        <td><label>IDENTIFICATION</label></td>
+                        <td><textarea name="Identification" placeholder="Identification"></textarea></td>
+                    </tr>
+                </table>
+                <input name="addVehicleButton" type="submit" value="Add">
+            </form>
+            <br /><br />
+        </div>
+    </div>
+    <br /><br />
+    <!-- feedback form -->
+    <div id="feedback" align="center">
+        <button class="collapsible">Submit Feedback</button>
+        <div class="content">
+            <form method="GET">
+                <h1>Give your feedback</h1>
+                <p>We would like to have your feedback to improve our service</p>
+                <p>What is your opinion</p>
+
+                <label style="font-size: 30px;margin-right: 20px;"><input type="radio" name="smiley"
+                        required> &#128515;</label>
+
+                <label style="font-size: 30px; margin-right: 20px;"><input type="radio" name="smiley" required>
+                    &#128528;</label>
+                <label style="font-size: 30px;margin-right: 20px; "><input type="radio" name="smiley" required>
+                    &#128545;</label>
+
+                <p>Please leave your feedback below</p>
+                <textarea name="feedback" placeholder="Write your feedback" style="width: 50%"></textarea><br><br>
+                <input name="feedbackSubmit" type="submit" value="Submit">
+            </form>
+            <br /><br />
+        </div>
+    </div>
+    <br /><br />
+    <!-- pricing form -->
+    <div id="pricing" align="center">
+        <button class="collapsible">Pricing details</button>
+        <div class="content">
+            <div class="price">
+                <form method="GET">
+                    <h1>Cycle</h1>
+                    <div id="circle">
+                        <div style="padding: 25% 25% 25% 25%;"> <strong style="font-size: 20px;">$100</strong> /month
+                        </div>
+
+                    </div>
+                    <br>
+                    <div align="center" style="font-size: 12px;">
+                        $5 Daily <br> $100 Monthly <br> $500 Yearly <br>
+                    </div>
+                    <br>
+                    <input name="purchase" type="submit" value="Purchase Now">
+                </form>
+
+            </div>
+            <div class="price">
+                <form method="GET">
+                    <h1>MotorCycle</h1>
+                    <div id="circle">
+                        <div style="padding: 25% 25% 25% 25%;"> <strong style="font-size: 20px;">$200</strong> /month
+                        </div>
+
+                    </div>
+                    <br>
+                    <div align="center" style="font-size: 12px;">
+                        $10 Daily <br> $200 Monthly <br> $1000 Yearly <br>
+                    </div>
+                    <br>
+                    <input name="purchase" type="submit" value="Purchase Now">
+                </form>
+
+            </div>
+            <div class="price">
+                <form method="GET">
+                    <h1>FourWheller</h1>
+                    <div id="circle">
+                        <div style="padding: 25% 25% 25% 25%;"> <strong style="font-size: 20px;">$500</strong> /month
+                        </div>
+                    </div>
+                    <br>
+                    <div align="center" style="font-size: 12px;">
+                        $20 Daily <br> $500 Monthly <br> $3500 Yearly <br>
+                    </div>
+                    <br>
+                    <input name="purchase" type="submit" value="Purchase Now">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
