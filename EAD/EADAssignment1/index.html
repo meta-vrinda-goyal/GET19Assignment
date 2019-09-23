@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metacube Parking System</title>
+    <script src="javascript.js">
+    </script>
+
+</head>
+
+<body align="center">
+    <h1>Welcome to Metacube Parking System</h1>
+    <div id="employee_registration">
+        <form name="registerForm" action="" method="POST" onsubmit="return false;">
+            <h2>Register here</h2>
+            <table align="center" style="text-align: left" cellpadding="10">
+                <tr>
+                    <td><label>FULL NAME</label></td>
+                    <td><input id="full_name" name="full_name" type="text" placeholder="Full Name" size="60%"
+                            pattern="[A-Z a-z]*" required></td>
+                </tr>
+                <tr>
+                    <td><label>GENDER</label></td>
+                    <td><label> <input type="radio" name="gender" id="employeeGender" value="Male" required>Male
+                        </label> <label> <input type="radio" name="gender" id="employeeGender" value="Female">Female
+                        </label></td>
+                    <td>
+                </tr>
+                <tr>
+                    <td><label>EMAIL</label></td>
+                    <td><input name="email" id="email" type="email" placeholder="Email" size="60%" required></td>
+                </tr>
+                <tr>
+                    <td><label>PASSWORD</label></td>
+                    <td><input name="password" id="password" type="password" placeholder="Password" size="60%"
+                            pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}" required></td>
+                </tr>
+                <tr>
+                    <td><label>CONFIRM PASSWORD</label></td>
+                    <td><input name="confirm_password" id="confirm_password" type="password"
+                            placeholder="Confirm Password" size="60%" required></td>
+                </tr>
+                <tr>
+                    <td><label>CONTACT</label></td>
+                    <td><input name="contact" id="contact" type="text" placeholder="Contact" size="60%" maxlength="10"
+                            pattern="([0-9]){10}" required></td>
+                </tr>
+                <tr>
+                    <td><label>ORGANIZATION</label></td>
+                    <td><select name="organization" id="organization" required>
+                        <option disabled selected value="">Select Organization</option>
+                        <option value="one">organization1</option>
+                        <option value="two">organization2</option>
+                        <option value="three">organization3</option>
+                        <option value="four">organization4</option>
+                        </select></td>
+                </tr>
+
+            </table>
+            <input id="register_employee" type="submit" value="Register" style="width: 150px; height:30px;"
+                onclick="registerEmployee()">
+        </form>
+    </div>
+    <div id="add_vehicle" style="visibility: hidden;">
+        <form action="" method="GET">
+            <h2>Add Vehicle</h2>
+            <table align="center" style="text-align: left" cellpadding="10">
+                <tr>
+                    <td><label>VEHICLE NAME</label></td>
+                    <td><input id="vehicle_name" type="text" placeholder="Vehicle name" size="60%"></td>
+                </tr>
+                <tr>
+                    <td><label>VEHICLE TYPE</label></td>
+                    <td><select id="vehicle_type">
+                            <option disabled selected>--Select Type--</option>
+                            <option value="cycle">Cycle</option>
+                            <option value="motorCycle">MotorCycle</option>
+                            <option value="fourWheeler">Four Wheeler</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label>VEHICLE NUMBER</label></td>
+                    <td><input id="vehicle_number" type="text" placeholder="Vehicle Number" size="60%"></td>
+                </tr>
+                <tr>
+                    <td><label>EMPLOYEE ID</label></td>
+                    <td><input id="emp_Id" type="text" placeholder="Employee Registration Id" size="60%"></td>
+                </tr>
+                <tr>
+                    <td><label> IDENTIFICATION</label></td>
+                    <td><textarea placeholder="Identification" size="60%" cols="61"></textarea></td>
+                </tr>
+            </table>
+            <input id="add_vehicle_submit" type="submit" value="Add Vehicle"
+                onclick="registerVehicle(vehicle_type.value)">
+    </div>
+
+    <div id="divForPass" style="visibility: hidden;">
+        <h2>Select your plan</h2>
+        <table border="5px" align="center" id="table">
+            <tr>
+                <th>Plan</th>
+                <th>Price in INR</th>
+            </tr>
+            <tr>
+                <td>Daily</td>
+                <td id="DailyPrice"></td>
+            </tr>
+            <tr>
+                <td>Montly</td>
+                <td id="MonthlyPrice"></td>
+            </tr>
+            <tr>
+                <td>Yearly</td>
+                <td id="YearlyPrice"></td>
+            </tr>
+        </table><br>
+        <select id="priceType" onchange="changeCurrency(priceType.value)">
+            <option disabled selected>--Select Price Type--</option>
+            <option>INR</option>
+            <option>USD</option>
+            <option>YEN</option>
+            </option>
+        </select>
+        <br>
+        <br>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="Daily"
+                onchange="getPriceFunction(this.value)">Daily</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="Monthly"
+                onchange="getPriceFunction(this.value)">Monthly</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="Yearly"
+                onchange="getPriceFunction(this.value)">Yearly</label>
+        <br>
+        <br>
+        <input type="button" value="getPass" id="getPass" onclick="getPassFunction()" />
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+server:
+ port: 8080
+spring:
+ mvc:
+  view:
+   prefix: /WEB-INF/pages/
+   suffix: .jsp
+   
+welcome :
+   message : Welcome to Student Database !
+
+
+

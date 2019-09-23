@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body align="center">
+	<h2>Login here</h2>
+	<form name="LoginForm" action="LoginServlet" method="get">
+		<table align="center" style="text-align: left" cellpadding="10">
+			<tr>
+				<td><label>REG ID</label></td>
+				<td><input name="regId" type="text" placeholder="RegID"
+					size="60%" required></td>
+			</tr>
+			<tr>
+				<td><label>PASSWORD</label></td>
+				<td><input name="password" type="password"
+					placeholder="Password" size="60%"
+					pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}" required></td>
+			</tr>
+		</table>
+		<br> <input id="Login_employee" type="submit" value="Login"
+			style="width: 100px; height: 30px">
+	</form>
+	<h3>
+		Not Registered yet <a href="index.html"> Register here</a>
+	</h3>
+</body>
+</html>
