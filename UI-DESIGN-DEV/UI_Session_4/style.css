@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    overflow-x: scroll;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url(images/bodybg.png);
+}
+
+#home {
+    background: url(images/homebg.png);
+    height: 1000px;
+    background-repeat: no-repeat;
+}
+
+#header,
+#flex-footer {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#header {
+    background-color: #648cff;
+    height: 10px;
+}
+
+.menu-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+
+li {
+    display: inline-block;
+}
+
+.menu-area a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+
+#menu {
+    flex-basis: 500px;
+}
+
+#social-links {
+    flex-basis: 100px;
+}
+
+#home_heading {
+    float: left;
+    margin-left: 150px;
+    /* margin-right: 1px; */
+    color: white;
+    margin-top: 30px;
+}
+
+#home_heading h1 {
+    font-weight: bold;
+    letter-spacing: -1px;
+    width: 600px;
+    font-size: 4em;
+}
+
+#home_heading a {
+    display: inline-block;
+    border-radius: 5%;
+    padding: 2% 4%;
+    margin-right: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+#home_image img {
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+.main_heading {
+    margin-top: 200px;
+    color: #648cff;
+    text-align: center;
+    font-size: 40px;
+}
+
+.sub_heading {
+    margin-top: -1%;
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+}
+
+.feature_heading {
+    font-size: 30px;
+}
+
+.feature_sub_heading {
+    font-size: 15px;
+    color: gray;
+    font-weight: lighter;
+}
+
+#feature_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.featureDescription {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 350px;
+}
+
+.featureDescription i {
+    margin-top: 40px;
+    margin-right: 20px;
+    font-size: 3.5em;
+    color: rgb(250, 110, 110);
+}
+
+#feature_img {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#slide-1-image {
+    transform: skew(0deg, 3deg)translateX(150px)scale(0.7);
+}
+
+#slide-2-image {
+    transform: skew(0deg, 3deg)translateX(50px);
+}
+
+#slide-3-image {
+    transform: scale(1.2)translateX(-550px);
+}
+
+#slide-4-image {
+    transform: skew(0deg, -3deg)translateX(-50px);
+}
+
+#slide-5-image {
+    transform: skew(0deg, -3deg)scale(0.7)translateX(700px);
+}
+
+.screenshot-section-descption-right {
+    margin-top: 80px;
+    margin-left: -200px;
+    width: 400px;
+}
+
+.screenshot-section-descption-left {
+    margin-top: 80px;
+    margin-right: -200px;
+    width: 400px;
+}
+
+.screenshot-section {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ss-heading {
+    font-size: 35px;
+}
+
+.ss-sub-heading {
+    font-size: 18px;
+    color: gray;
+    font-weight: lighter;
+}
+
+#review-sec-1,
+#review-sec-2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#review-sec-1 div,
+#review-sec-2 div {
+    margin-bottom: 25px;
+    width: 450px;
+    height: 200px;
+}
+
+#review-sec-1 p,
+#review-sec-2 p {
+    font-size: 18px;
+}
+
+#review-sec-1 span,
+#review-sec-2 span {
+    margin-top: -15px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#reviews i {
+    color: #648cff;
+}
+
+#reviews i:nth-child(2n) {
+    float: right;
+}
+
+#download-app {
+    margin-top: 100px;
+    background: url(images/downloadbg.png);
+    display: flex;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+#download-descp {
+    margin-left: 80px;
+    margin-top: 100px;
+    width: 400px;
+    color: white;
+}
+
+#download-descp h2 {
+    font-size: 2em;
+}
+
+#download-descp span {
+    width: 350px;
+    display: block;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+#appDwnloadImg {
+    margin-top: 100px;
+}
+
+footer {
+    background-color: rgb(0, 0, 34);
+    height: 300px;
+}
+
+footer p {
+    text-align: center;
+    color: gray;
+    font-weight: lighter;
+    margin-top: 100px;
+}
+
+y
