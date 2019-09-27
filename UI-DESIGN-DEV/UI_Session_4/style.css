@@ -47,6 +47,11 @@ li {
     flex-direction: row;
     justify-content: space-between;
     margin-top: -5px;
+    color: white;
+}
+
+.social-links i {
+    color: white;
 }
 
 #menu {
@@ -177,6 +182,21 @@ li {
     justify-content: space-evenly;
 }
 
+.bg-content,
+.bg-content-left {
+    transform: rotate(90deg);
+    color: rgb(221, 221, 221);
+    position: absolute;
+    font-size: 200px;
+    margin-left: -100px;
+    margin-top: 150px;
+    z-index: -1;
+}
+
+.bg-content-left {
+    margin-left: 450px;
+}
+
 .ss-heading {
     font-size: 35px;
 }
@@ -257,10 +277,12 @@ footer {
 }
 
 footer p {
+    margin: auto;
+    padding: 50px;
     text-align: center;
     color: gray;
     font-weight: lighter;
     margin-top: 100px;
+    border-top: 1px solid gray;
+    width: 900px;
 }
-
-y
