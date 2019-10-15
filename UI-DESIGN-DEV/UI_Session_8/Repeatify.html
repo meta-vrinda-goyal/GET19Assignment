@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        
+        function repitify(){
+
+            var string=document.getElementById("inputtext").value;
+            var number=document.getElementById("inputnumber").value;
+            var result="";
+            var i;
+            for( i=0;i<number;++i){
+
+                result+=string;
+
+            }
+            alert(result);
+
+
+        }
+
+        </script>
+    </head>
+    <body>
+            <input type="number" id="inputnumber" placeholder="enter number"/>
+            <input id="inputtext" placeholder="enter string"/>
+            <input type="button" value="repeat" onclick="repitify()"/>
+            
+    </body>
+</html>
