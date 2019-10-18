@@ -1,0 +1,18 @@
+<div class="container  col-lg-12 my-0 mx-1" style="background-color: #b2ebf2;border-bottom: 1px solid rgba(160, 154, 154, 0.192) ">
+    <div class="card" style="background-color: #b2ebf221; border-width: 0px;">
+        <div class="card-body">
+            <p class="card-title"><i><b>TITLE:</b></i> {{task.title}}</p>
+            <p class="card-text">
+                <i><b>DESCRIPTION:</b></i> {{task.description}}<br>
+                <i><b>Creation Date:</b></i> {{task.creationDate}}<br>
+                <i><b>Completion Date:</b></i> {{task.completionDate}}<br>
+            </p>
+            <div class="row justify-content-between">
+                <button type="button" class="mx-2 my-2" style="background-color:rgba(160, 154, 154, 0); border-width: 0;" (click)="delete(task)">
+                    <h1><i class="fa fa-trash"></i></h1>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

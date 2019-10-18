@@ -1,0 +1,29 @@
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<div class="container">
+    <div class="row text-center" style="margin-left:200px;">
+        <div class="col-lg-3 col-sm-12 ml-5" style="background-color: #f5f5f5 ;">
+            <div class="">
+                <h5>New</h5>
+            </div>
+            <div *ngFor="let task of taskList">
+                <app-new-task *ngIf="task.status=='new'" [task]="task"></app-new-task>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 ml-5" style="background-color: #f5f5f5;margin-left:15px;">
+            <div class="">
+                <h5>In Progress</h5>
+            </div>
+            <div *ngFor="let task of taskList">
+                <app-in-process-task *ngIf="task.status=='inProcess'" [task]="task"></app-in-process-task>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 ml-5" style="background-color: #f5f5f5 ;margin-left:15px">
+            <div class="">
+                <h5>Completed</h5>
+            </div>
+            <div *ngFor="let task of taskList">
+                <app-completed-task *ngIf="task.status=='completed'" [task]="task"></app-completed-task>
+            </div>
+        </div>
+    </div>
+</div>
