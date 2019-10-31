@@ -1,0 +1,61 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.blog-post {
+    margin-bottom: 4rem;
+}
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo a {
+    font-size: 2.25rem;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.blog-header-logo a:hover {
+    text-decoration: none;
+}
+
+.nav-scroller {
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    overflow-x: auto;
+}
+
+.text-lightGray {
+    color: #999;
+}
+
+.pagination {
+    margin: 4rem 0;
+}
+
+.pagination>a {
+    border-radius: 2rem;
+}
+
+.blog-post-title {
+    font-size: 2.5rem;
+}

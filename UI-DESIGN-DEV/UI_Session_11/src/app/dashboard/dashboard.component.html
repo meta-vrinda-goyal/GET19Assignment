@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-3">
+        <ul class="list-group ">
+            <a>
+                <li class="list-group-item">All Categories</li>
+            </a>
+            <a>
+                <li class="list-group-item">Bread</li>
+            </a>
+            <a>
+                <li class="list-group-item">Dairy</li>
+            </a>
+            <a>
+                <li class="list-group-item">Fruits</li>
+            </a>
+            <a>
+                <li class="list-group-item">Seasonings and Spices</li>
+            </a>
+            <a>
+                <li class="list-group-item">Vegetables</li>
+            </a>
+
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <div class="row">
+            <div class="card col-sm-4 ml-5 mb-5" style="width:80%;" *ngFor="let product of products">
+                <img [src]="product.image" class="card-img-top img-fluid" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.product_name}}</h5>
+                    <h6 class="card-text">${{product.product_price}}</h6>
+
+                </div>
+                <a href="#" class="btn btn-secondary button">ADD TO CART</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+* {
+    border: 0px solid black;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-anchor:hover {
+    color: dodgerblue !important;
+}
+
+.menu {
+    padding: 12px 25px 0px 25px !important;
+    letter-spacing: .035em;
+    pointer-events: none;
+    cursor: default;
+    font-size: 13px;
+    color: #707070;
+}
+
+header {
+    background-color: #5B6BE8;
+}
+
+.searchField {
+    background-color: #6D7BEB;
+    border-radius: 25px;
+}
+
+.searchField input {
+    background-color: transparent;
+    border: 0px solid;
+    outline: 0;
+    color: white;
+    width: 85%;
+}
+
+.searchField input::placeholder,
+.searchField i {
+    color: #B4BBF5;
+
+}
+
+.nav_bar ul {
+    float: right;
+}
+
+.nav_bar img {
+    height: 18px;
+    width: auto;
+}
+
+.badge-upon-icon {
+    position: relative;
+    top: -0.7rem;
+    right: 0.4rem;
+}
+
+.profile_img {
+    height: 30px !important;
+}
+
+.country-circle {
+    font-size: 13px;
+    margin: 0px 5px;
+}
+
+.scroll {
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.scrollable {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.dropdown-menu {
+    min-width: 50px;
+}

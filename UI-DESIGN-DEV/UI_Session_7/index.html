@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parking System</title>
+    <script src="https://kit.fontawesome.com/411740ddde.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1 align='center' id='mainHeading'>Parking System</h1>
+    <div id="outer-div" class="container">
+        <h1 id="welcome-heading"></h1>
+        <label id="label"> Please enter your full name </label>
+        <div class="container">
+            <input id="full_name" type="text" class="form-control" placeholder="Full Name">
+            <div id="gender-div">
+                <label><input type="radio" name="gender" value="M" ID='M' required>Male</label>
+                <label><input type="radio" name="gender" value="F" ID='F'>Female</label>
+            </div>
+            <input id="email" type="email" class="form-control" placeholder="Email">
+            <input id="password" type="password" class="form-control" placeholder="Password" onkeyup="passwordStrength(this.value)">
+            <input id="confirm_password" type="password" class="form-control" placeholder="Confirm Password">
+            <input id="contact" type="text" class="form-control" placeholder="Contact">
+            <select id="organization" class="form-control">
+                <option disabled selected>Select Organization</option>
+                <option>Metacube</option>
+                <option>TCS</option>
+                <option>Infosys</option>
+                <option>Wipro</option>
+            </select>
+            <i id="submit-organization" class="fas fa-arrow-circle-right"></i>
+        </div>
+
+        <div class="container">
+            <!-- <input id="emp_Id" type="text" placeholder="Employee ID" readonly> -->
+            <input id="vehicle_name" type="text" class="form-control" placeholder="Vehicle Name">
+            <select id="typeOfVehicle" class="form-control">
+                    <option disabled selected>--Select-Type--</option>
+                    <option value="Cycle">Cycle</option>
+                    <option value="MotorCycle">MotorCycle</option>
+                    <option value="Four Wheelers">Four Wheelers</option>
+            </select>
+            <i id="submit-vehicleType" class="fas fa-arrow-circle-right"></i>
+            <input id="vehicleNumber" class="form-control" type="text" placeholder="Vehicle Number">
+            <input id="vehicleIdentification" class="form-control" type="text" placeholder="Identification">
+        </div>
+        <div class="container">
+            <!-- <input id="emp_Id" type="text" placeholder="Employee ID" readonly> -->
+            <select id="typeOfCurrency" class="form-control">
+                <option disabled selected>--Select-Type--</option>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="YEN">YEN</option>
+            </select>
+            <i id="submit-currencyType" class="fas fa-arrow-circle-right"></i>
+            <table class="table" id='priceTable'>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Plan Type</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Daily</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Monthly</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Yearly</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <i id="submit-table" class="fas fa-arrow-circle-right"></i>
+            <select id="planType" class="form-control">
+                <option disabled selected>--Select-Type--</option>
+                <option value="Daily">Daily</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+            </select>
+            <i id="submit-PlanType" class="fas fa-arrow-circle-right"></i>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
